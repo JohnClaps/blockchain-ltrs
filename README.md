@@ -1,4 +1,4 @@
-# Blockchain-Based Student Loan Tracking and Repayment System
+ # Blockchain-Based Student Loan Tracking and Repayment System
 
 ## Overview
 This project is a **blockchain-powered platform** designed to streamline student loan management for **students**, **lenders**, and **academic institutions**. By leveraging blockchain technology, the system ensures **transparency**, **security**, and **automation** in loan tracking, repayments, and compliance.
@@ -34,12 +34,12 @@ This project is a **blockchain-powered platform** designed to streamline student
 ---
 
 ## Technology Stack
-- **Blockchain**: Ethereum (Smart Contracts), Polygon (Layer-2 Scaling).
+- **Blockchain*:Hyperledger fabric,Fabric Gateway.
 - **Frontend**: React.js, Tailwind CSS.
 - **Backend**: Node.js, Express.js.
-- **Database**: MongoDB (off-chain data), IPFS (decentralized storage).
+- **Database**: MySQL/PostgreSQL (off-chain storage).
 - **Oracles**: Chainlink (for external data like employment verification).
-- **Authentication**: MetaMask (Web3 login), JWT (traditional login).
+- **Authentication**: Fabric SDK, JWT (traditional login).Web3 Login
 
 ---
 
@@ -48,11 +48,13 @@ This project is a **blockchain-powered platform** designed to streamline student
 ### Prerequisites
 - Node.js (v16 or higher)
 - npm or yarn
-- MetaMask (for blockchain interactions)
-- Ethereum testnet tokens (e.g., Goerli ETH)
+- hyperledger fabric 2.4x
 
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-repo/blockchain-loan-system.git
-   cd blockchain-loan-system
+   git clone https://github.com/your-repo/blockchain-ltrs.git
+   cd blockchain-ltrs/myapp/client
+   npm i
+   npm run dev
+   
