@@ -1,4 +1,4 @@
- # Blockchain-Based Student Loan Tracking and Repayment System
+ # Blockchain-Based LTRS
 
 ## Overview
 This project is a **blockchain-powered platform** designed to streamline student loan management for **students**, **lenders**, and **academic institutions**. By leveraging blockchain technology, the system ensures **transparency**, **security**, and **automation** in loan tracking, repayments, and compliance.
