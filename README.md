@@ -38,7 +38,7 @@ This project is a **blockchain-powered platform** designed to streamline student
 - **Frontend**: React.js, Tailwind CSS.
 - **Backend**: Java,Express JS.
 - **Database**: MySQL(off-chain data).
-- **Oracles**: Chainlink (for external data like employment verification).
+- **Oracles**: Chainlink.
 - **Authentication**: Fabric SDK(Web3 login), JWT (traditional login).
 
 ---
