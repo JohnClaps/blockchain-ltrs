@@ -1,28 +1,26 @@
 import React from 'react';
 import './wp-style.css';
-import Image from "next/image"
-
+import Image from "next/image";
+import { FaGithub, FaXTwitter,FaFacebook,FaLinkedin } from 'react-icons/fa6';
+import Navbar from './navbar';
 const WelcomePage: React.FC = () => {
   return (
     <div className="welcome-container">
       {/* Header */}
+      <Navbar />
       <header className="header">
         <div className="logo-container">
-          <Image src = "/logo.jpg" height={100} width={100} alt = "logo" />          
-          <h1 className="logo">Student-LTRS</h1>
-          <span className="tagline">Transparent. Secure. Efficient.</span>
-        </div>
+        </div> 
         <nav className="navigation">
           <a href="#features" className="nav-link">Features</a>
           <a href="#how-it-works" className="nav-link">How It Works</a>
-          <a href="/login" className="nav-link login-button">Login</a>
         </nav>
       </header>
 
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h2>Revolutionizing Student Loan Management</h2>
+          <h2>Easy Student Loan Management</h2>
           <p className="hero-text">
             Our blockchain-powered platform brings transparency and automation to 
             student loan tracking and repayment for students, lenders, and institutions.
@@ -34,7 +32,9 @@ const WelcomePage: React.FC = () => {
         </div>
         <div className="hero-image">
           {/* Placeholder for an illustration */}
-          <div className="blockchain-visual"></div>
+          <div className="blockchain-visual">
+            <Image src="/money-2696231_640.jpg" height={1000} width={1000} alt="Visual" />
+          </div>
         </div>
       </section>
 
@@ -93,7 +93,7 @@ const WelcomePage: React.FC = () => {
                 objectFit:'cover',
               }}/>
             </div>
-            <p> 2025 Student-LTRS. All rights reserved.</p>
+            <p> 2025 Student-LTRS. All rights reserved.</p> 
           </div>
           <div className="footer-section">
             <h5>Quick Links</h5>
@@ -104,9 +104,18 @@ const WelcomePage: React.FC = () => {
           <div className="footer-section">
             <h5>Connect</h5>
             <div className="social-links">
-              <a href="#">Twitter</a>
-              <a href="#">LinkedIn</a>
-              <a href="#">GitHub</a>
+              <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" >
+                <FaFacebook className="hover:text-blue transition-colors duration-200" size={25}/>
+              </a>
+              <a href="https://www.linkedin.com" target='_blank' rel='noopener noreferrer'>
+              <FaLinkedin className="hover:text-blue transition-colors duration-200" size={25}/>
+              </a>
+              <a href="https://www.github.com" target='_blank' rel='noopener noreferrer'>
+              <FaGithub className='hover:text-blue transition-colors duration-200' size={25}/>
+              </a>
+              <a href='https://www.x.com' target='_blank' rel='noopener noreferrer'>
+              <FaXTwitter className='hover:text-blue transition-colors duration-200' size={25}/>
+              </a>
             </div>
           </div>
         </div>
