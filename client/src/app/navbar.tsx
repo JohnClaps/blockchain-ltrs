@@ -1,9 +1,16 @@
+'use client';
 import Image from 'next/image';
-import { FaGithub } from 'react-icons/fa';
 import  "./wp-style.css";
-import { text } from 'stream/consumers';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
+  const router = useRouter();
+  const handleLoginClick=()=>{
+    router.push("/login");
+  };
+  const handleSignUpClick=()=>{
+    router.push('/signup');
+  };
   return (
     <nav className="bg-[#ffffff] text-black px-6 py-3 flex items-center justify-between shadow-md">
       {/* Left Section: Logo and Menu */}
@@ -68,14 +75,14 @@ export default function Navbar() {
         <input
           type="text"
           placeholder="Search or jump to…"
-          className="bg-[grey] text-white text-sm px-4 py-1 rounded border border-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-56"
+          className="bg-[gray] text-white text-sm px-4 py-1 rounded border border-green-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-56"
         />
 
         {/* Auth Buttons */}
-        <button className="text-sm px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition">
+        <button onClick={handleSignUpClick} className="text-sm px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-blue-500 hover:text-white transition">
             Sign Up
         </button>
-        <button className="text-sm px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-grey-500 hover:text-yellow transition">
+        <button onClick={handleLoginClick} className="text-sm px-4 py-1 border border-blue-500 text-blue-500 rounded hover:bg-grey-500 hover:text-yellow transition">
             Login 
         </button>
       </div>

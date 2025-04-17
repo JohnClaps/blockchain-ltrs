@@ -1,7 +1,9 @@
 'use client';
+
 import { FaFacebook, FaLinkedin, FaTwitter } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-
+import Image from 'next/image';
+import { FaGithub, FaXTwitter } from 'react-icons/fa6';
 export default function Login() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -9,14 +11,17 @@ export default function Login() {
         
         {/* Left Illustration & Title */}
         <div className="flex flex-col justify-center items-center text-center space-y-6">
-          <img
-            src="/grad.png" // Replace with your actual path (e.g. public folder)
-            alt="Graduate Illustration"
-            className="w-[300px] h-auto"
-          />
           <h1 className="text-3xl md:text-4xl font-semibold text-gray-700">
             Welcome to HESLGB <span className="font-bold text-black">Loan Tracking & Repayment System</span>
           </h1>
+          <Image
+            src="https://cdn.pixabay.com/photo/2020/09/13/20/28/graduate-5569301_1280.png" // Replace with your actual path (e.g. public folder)
+            alt="Graduate Illustration"
+            className="w-[300px] h-auto"
+            layout="responsive"
+            width={1000}
+            height={1000}
+          />
         </div>
 
         {/* Login Card */}
@@ -71,14 +76,18 @@ export default function Login() {
         <div className="flex items-center space-x-1">
           <span>©</span>
           <span>heslgbtrts-copytight@2025</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <span>✉️</span>
-          <span>ltrs@heslgb.mw</span>
-        </div>
-        <div className="flex items-center space-x-1">
-          <FaTwitter />
-          <span>Twitter</span>
+          <a href='https://web.facebook.com/HESLGBOFFICIALPAGE/?_rdc=1&_rdr#' target='_blank' rel='noopener noreferrer'>
+          <FaFacebook className='hover:text-blue transition-colors duration-200' size={25}/>
+          </a>
+          <a href='https://www.github.com' target='_blank' rel='noopener noreferrer'>
+          <FaGithub className='hover:text-blue transition-colors duration-200' size={25}/>
+          </a>
+          <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer'>
+          <FaLinkedin className='hover:text-blue transition-colors duration-200' size={25}/>
+          </a>
+          <a href='https://www.x.com' target='_blank' rel='noopener noreferrer'>
+          <FaXTwitter className='hover:text-blue transition-colors duration-200' size={25}/>
+          </a>
         </div>
       </footer>
     </div>
